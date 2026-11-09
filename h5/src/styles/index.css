@@ -1,0 +1,118 @@
+:root {
+  /* 品牌蓝（与登录页、Web 端主题统一） */
+  --brand-1: #1736c8;
+  --brand-2: #2358e6;
+  --brand-3: #3d86f8;
+  --brand: #2258e8;
+  --brand-soft: #f4f6fb;
+
+  --van-primary-color: #2258e8;
+  --van-success-color: #17a673;
+  --van-warning-color: #f0a03c;
+  --van-danger-color: #e35d6a;
+  --van-text-color: #1d2333;
+  --van-text-color-2: #8a93a6;
+  --van-background: #f2f5fb;
+  --van-background-2: #ffffff;
+  --van-nav-bar-background: #ffffff;
+  --van-nav-bar-title-text-color: #1d2333;
+  --van-nav-bar-icon-color: #1d2333;
+  --van-tabs-bottom-bar-color: #2258e8;
+  --van-tabs-default-color: #2258e8;
+  --van-button-primary-background: #2258e8;
+  --van-button-primary-border-color: #2258e8;
+  --van-field-label-color: #5a6478;
+  --van-checkbox-checked-icon-color: #2258e8;
+  --van-radio-checked-icon-color: #2258e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #e9eef8;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  color: #1d2333;
+}
+
+#app {
+  min-height: 100vh;
+  max-width: 480px;
+  margin: 0 auto;
+  background: #f2f5fb;
+  overflow-x: hidden;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  margin: 0 14px 12px;
+  box-shadow: 0 8px 24px rgba(23, 54, 200, 0.07);
+}
+
+/* 顶部品牌渐变区，列表页与详情页共用 */
+.brand-hero {
+  color: #fff;
+  background: linear-gradient(150deg, var(--brand-1) 0%, var(--brand-2) 55%, var(--brand-3) 100%);
+}
+
+.page-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 64px 0;
+  color: #8a93a6;
+  font-size: 13px;
+}
+
+.tab-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 13px;
+}
+
+.tab-count {
+  min-width: 15px;
+  height: 15px;
+  padding: 0 4px;
+  border-radius: 8px;
+  background: rgba(34, 88, 232, 0.1);
+  color: #2258e8;
+  font-size: 10px;
+  line-height: 15px;
+  text-align: center;
+}
+
+/* 底部导航（跟随 480px 手机画幅居中） */
+.app-tabbar {
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 480px;
+  box-shadow: 0 -4px 16px rgba(23, 54, 200, 0.08);
+  --van-tabbar-item-active-color: #2258e8;
+  --van-tabbar-item-text-color: #9aa3b5;
+  --van-tabbar-height: 54px;
+}
+
+.page.with-tabbar {
+  padding-bottom: calc(62px + env(safe-area-inset-bottom));
+}

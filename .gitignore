@@ -1,0 +1,30 @@
+# 依赖
+node_modules/
+
+# 构建产物
+dist/
+target/
+*.jar
+*.war
+*.class
+
+# 环境变量（后端 .env 含数据库口令，不入库）
+/backend/.env
+
+# 运行时产物
+uploads/
+logs/
+*.log
+*.tsbuildinfo
+.vite/
+.vite-temp/
+
+# IDE / 系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 本地截图与备份
+.screenshots/
+.backup/
